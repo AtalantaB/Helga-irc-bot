@@ -1,5 +1,8 @@
 import subprocess as sp
 
-sp.call('python helga.py')
+try:
+    sp.call('python helga.py')
+except:
+    sp.call('python3 helga.py')
     
     
