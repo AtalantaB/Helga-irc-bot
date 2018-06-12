@@ -1,2 +1,0 @@
-@echo
-python helga.py
