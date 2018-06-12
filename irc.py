@@ -7,7 +7,13 @@ class IRC():
     def send(self, chan, msg):
         self.irc.send(bytes('PRIVMSG %s :%s\n' % (chan, msg),'UTF-8'))
         
-    def connect(self, server, port, channel, botNick, botDescription = 'This is Helga Bot'):
+    def connect(self, setDict):
+        server = setDict['server']
+        port = setDict['port']
+        botNick = setDict['botnick']
+        botDescription = setDict['botdescription']
+        channels = setDict['channels']
+
         self.irc.connect((server, port))
 
         #Set username and description
@@ -17,8 +23,8 @@ class IRC():
         self.irc.send(bytes('NICK %s\n' % botNick, 'UTF-8'))
 
         #Join each channel specified
-        for chan in channel:
-            self.irc.send(bytes('JOIN %s\n' % chan,'UTF-8'))
+        for chan in channels:
+            self.irc.send(bytes('JOIN %s\n' % (chan if chan.startswith('#') else '#' + chan),'UTF-8'))
 
     def get_text(self):
         text = self.irc.recv(2040).decode('UTF-8').strip('\n\r')
