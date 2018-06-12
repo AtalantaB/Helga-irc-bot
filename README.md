@@ -2,26 +2,20 @@
 
 Instructions:
 
-	1) Read the README.md
-	2) Wait for me to write some actual code
-	3) ?????
-	...
-	Seriously?
-	Are you still here?
-	There's no other Instructions...
-	Have you seen the Master branch? It's empty. There's nothing here but the README.md...
-	Well I guess you could read the license if you really wanted to...
-	Why are you still reading this?!
-	Ok whatever, do what you like...
+	1) run Helga-Bot.bat
+	2) Confirm settings, or decline and set new default settings
+	3) That's it so far, more coming soon.
+
+	If you want to see the default settings or change them open Config.ini (Config.ini will not be generated until running the bot at least once.)
 
 Features:
 
-	None right now.
+	Allows for persistent default settings that are easily changeable.
 
 Roadmap:
 
-	Create basic IRC bot Including config files and such.
-	Add callable methods to add new responses to keywords
+	Create basic IRC bot Including config files and such. - 6/12/2018: 14:52
+	Add callable methods to add new responses to keywords - WIP
 	Extend callable methods to allow for the addition of special stuff like nick's, channels, links, etc.
 	Create basic GUI for bot to allow for the graphical use of methods to extend helga.
 	Extend Helga to include completing other common commands when privmsg is received.
@@ -32,3 +26,7 @@ Roadmap:
 ChangeLog:
 
 	Created README.md
+	Created Irc.py
+	created Helga.py
+	created ConfigWizard.py
+	Edited default's in ConfigWizard.py
