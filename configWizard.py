@@ -1,10 +1,10 @@
 #Config.py Configuration wizard.
 
-import configparser, os, re, logging
+import configparser, os, re, logging, system
 import subprocess as sp
 
 def clearScreen():
-    tmp = sp.call('cls',shell=True)
+    tmp = sp.call('cls',shell=True) if system.platform().lower() == 'windows' else sp.call('clear', shell=True)
 
     
 def confirmChoice(config, section):            
